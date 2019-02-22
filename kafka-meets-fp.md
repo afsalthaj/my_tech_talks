@@ -1,6 +1,6 @@
 <!-- $theme: gaia -->
 
-## Kafkaaa for last ~3 months
+## Kafkaaa meets FP!
 
 ----------------
 
