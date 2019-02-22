@@ -9,7 +9,7 @@
 
 ## What's covered:
 
-- Sharing general experience with kafka in IAG for last ~3 months
+- Sharing general experience with kafka for last ~3 months
 - How can we reduce the bugs, runtime errors ?
 - Importance of test, a few practices followed.
 - Sharing a few code snippets that may be interesting.
@@ -204,7 +204,7 @@ Avro serialisation is dependent on few configurations that we must set usng `jav
 <span style="font-size:75%">
 
 
-## A simple standardisation app in IAG.
+## A simple standardisation app.
 
 Let's say we are writing a simple abstract KStreams app that does some sort of standardization of data to a defined schema and storing it in Kafka. During the process, we make sure the data is added with Keys, and partitioned as per keys.
 
@@ -812,7 +812,7 @@ def genOfValidRecord: Gen[ValidRecord] =
 
 ## Final tagless for an automation
 
-In IAG, we had to deal with an automation that sticks together various components that with schema registry, kafka-connect, streams, admin clients and so forth. Each component looks like this:
+We had to deal with an automation that sticks together various components that with schema registry, kafka-connect, streams, admin clients and so forth. Each component looks like this:
 
 ```scala
 type Action[F[_], A] = Kleisli[EitherT[F, SchemaRegistryError, ?], SchemaRegistryClient, A]
