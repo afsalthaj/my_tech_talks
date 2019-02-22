@@ -555,7 +555,7 @@ def buildStreams[K1: HasSerde, K2: HasSchema, V1: HasSerde, V2: HasSchema](
 
 * Users of buildStreams don't make assumptions, but only implement the constraints - less powerful constraints.
 * If compiles, it works with better confidence than passing magic strings of serde classes.
-* Better separation of concerns. Users of `buildStreams` need to worry about only `KeyValueDerivation.
+* Better separation of concerns. Users of `buildStreams` need to worry about only `KeyValueDerivation`.
 * Type says the story: _It reads `K1` and `V1` and converts to `K2`, `V2`.
 * If not happy with `avro4s` way of doing things, you can directly use `KafkaAvroStreams` instead of `fromGenericRecord` function with the `HasSchema` constraint in place.
 * Obviously, same or even less number of lines of code - that are safe!
@@ -856,8 +856,6 @@ PS: More time was spent on simulating the entire flow in docker environment. How
 * Find abstractions, constraints and form a type driven approach.
 * Tagless final wins many times
 * Prefer writing it in any language that has `Either` and `F` that can represent concurrency.
-* Above all, let's explain this to client side developers !
-
 
 ---
 
