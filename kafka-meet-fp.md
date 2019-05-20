@@ -328,7 +328,7 @@ Why don't we try a less powerful abstraction as a constraint (which is then expo
 
 For that, we could rely on a few internals of a library called `avro4s`, and develop something as given below. Explanation later:
 
-```
+```scala
   def fromGenericAvroSerde[B: HasSchema : Encoder : Decoder]: HasSerde[B] = {
     val recordFormat = RecordFormat.apply[B](HasSchema[B].getSchema)
 
